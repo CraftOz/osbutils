@@ -36,9 +36,13 @@ import org.junit.runner.Description;
 import javax.xml.namespace.QName;
 
 import weblogic.xml.query.exceptions.XQueryException;
-import weblogic.xml.query.xdbc.iterators.TokenIterator; // MW_HOME/Oracle_OSB1/modules/com.bea.core.xquery_1.7.0.0.jar
-import com.bea.wli.common.xquery.XQueryExecutor; // MW_HOME/Oracle_OSB1/lib/modules/com.bea.alsb.resources.xquery.jar
-import com.bea.wli.sb.stages.transform.ExecuteOptions; // MW_HOME/Oracle_OSB1/lib/sb-kernel-api.jar
+import weblogic.xml.query.xdbc.iterators.TokenIterator; 
+
+import com.bea.wli.common.xquery.x2004.XQueryExecutor; 
+import com.bea.wli.common.xquery.x2004.XQueryExecutorFactory;
+import com.bea.wli.common.xquery.x2004.XQueryExecutorImpl;
+import com.bea.wli.common.xquery.XQExecOptions;
+//import com.bea.wli.sb.stages.transform.ExecuteOptions; 
 
 import com.oracle.uk.ocs.osb.xqtest.util.XQXmlTestUtil;
 
@@ -218,10 +222,11 @@ public abstract class XQAbstractTest {
 	 * @throws com.bea.wli.common.xquery.XQueryException
 	 * @throws XQueryException
 	 */
-	public void executeQuery(String xq) throws XQueryException, com.bea.wli.common.xquery.XQueryException {
-		XQueryExecutor exec = XQueryExecutor.create(xq);
+	public void executeQuery(String xq) throws XQueryException, com.bea.wli.common.xquery.x2004.XQueryException {
+		XQueryExecutorFactory xqexf = new XQueryExecutorFactory();
+		XQueryExecutor exec = xqexf.create(xq);
 		Object currentNode = null;
-		ExecuteOptions options = null;
+		XQExecOptions options = null;
 
 		result = exec.executeXmlObject(currentNode, parameterMap, options);
 	}
@@ -233,7 +238,7 @@ public abstract class XQAbstractTest {
 	 * @throws com.bea.wli.common.xquery.XQueryException
 	 * @throws XQueryException
 	 */
-	public void executeQuery(File file) throws IOException, XQueryException, com.bea.wli.common.xquery.XQueryException {
+	public void executeQuery(File file) throws IOException, XQueryException, com.bea.wli.common.xquery.x2004.XQueryException {
 		File xqfile = findXQueryFile(file);
 		executeQuery(readFileAsString(xqfile));
 	}

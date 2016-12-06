@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="tests"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="src" path="tests"/>	
+	<classpathentry kind="var" path="FMW_HOME/soa/plugins/jdeveloper/integration/lib/bpa/com.bea.core.xml.xmlbeans.jar"/>
+	<classpathentry kind="var" path="FMW_HOME/oracle_common/modules/oracle.xdk/xqjapi.jar"/>
+	<classpathentry kind="var" path="FMW_HOME/oracle_common/modules/com.bea.core.xquery.xmlbeans-interop_1.8.0.0.jar"/>
+	<classpathentry kind="var" path="FMW_HOME/jdeveloper/jdev/extensions/oracle.ide.groovy/antlr-2.7.6.jar"/>
+	<classpathentry kind="var" path="FMW_HOME/osb/lib/modules/oracle.servicebus.resources.xquery.jar"/>
+	<classpathentry kind="var" path="FMW_HOME/osb/lib/modules/oracle.servicebus.kernel-api.jar"/>
+	<classpathentry kind="var" path="FMW_HOME/oracle_common/modules/com.bea.core.binxml_1.8.0.0.jar"/>
+	<classpathentry kind="var" path="FMW_HOME/oracle_common/modules/com.bea.core.xquery_1.8.0.0.jar"/>
+	<classpathentry kind="var" path="FMW_HOME/osb/lib/modules/oracle.servicebus.utils.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="var" path="FMW_HOME/modules/com.bea.core.xml.xmlbeans_2.2.0.0.jar"/>
-	<classpathentry kind="var" path="FMW_HOME/modules/com.bea.core.xquery_1.3.0.0.jar"/>
-	<classpathentry kind="var" path="FMW_HOME/modules/com.bea.core.xquery.xmlbeans-interop_1.3.0.0.jar"/>
-	<classpathentry kind="var" path="FMW_HOME/modules/com.bea.core.antlr.runtime_2.7.7.jar"/>
-	<classpathentry kind="var" path="FMW_HOME/modules/com.bea.core.binxml_1.3.0.0.jar"/>
+	<!--
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_91"/>
 	<classpathentry kind="output" path="bin"/>
+	-->	
 </classpath>
